@@ -3,8 +3,14 @@
 }
 .buttons .buttons-row {
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
   flex-direction: row;
+  -ms-flex-pack: distribute;
   justify-content: space-around;
   padding: 2px 0;
 }
@@ -23,7 +29,27 @@
   -o-border-radius: 5px;
 }
 .buttons .btn:hover {
-  background: linear-gradient(hsla(0deg, 0%, 100%, 0.4), hsla(0deg, 0%, 100%, 0.3) 25%, rgba(246, 249, 252, 0.3) 50%, #f6f9fc 280%);
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(hsla(0deg, 0%, 100%, 0.4)),
+    color-stop(25%, hsla(0deg, 0%, 100%, 0.3)),
+    color-stop(50%, rgba(246, 249, 252, 0.3)),
+    color-stop(280%, #f6f9fc)
+  );
+  background: -o-linear-gradient(
+    hsla(0deg, 0%, 100%, 0.4),
+    hsla(0deg, 0%, 100%, 0.3) 25%,
+    rgba(246, 249, 252, 0.3) 50%,
+    #f6f9fc 280%
+  );
+  background: linear-gradient(
+    hsla(0deg, 0%, 100%, 0.4),
+    hsla(0deg, 0%, 100%, 0.3) 25%,
+    rgba(246, 249, 252, 0.3) 50%,
+    #f6f9fc 280%
+  );
   color: white;
 }
 .buttons .btn-backspace {
@@ -38,15 +64,31 @@
 * {
   margin: 0;
   padding: 0;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   font-family: "poppins", monospace;
   color: #111439;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 body {
-  background: linear-gradient(315deg, rgb(189, 81, 62) 3%, rgb(46, 100, 136) 38%, rgb(109, 160, 67) 80%);
+  background: -o-linear-gradient(
+    135deg,
+    rgb(189, 81, 62) 3%,
+    rgb(46, 100, 136) 38%,
+    rgb(109, 160, 67) 80%
+  );
+  background: linear-gradient(
+    315deg,
+    rgb(189, 81, 62) 3%,
+    rgb(46, 100, 136) 38%,
+    rgb(109, 160, 67) 80%
+  );
   -webkit-animation: gradient 15s ease infinite;
-          animation: gradient 15s ease infinite;
+  animation: gradient 15s ease infinite;
   background-size: 400% 400%;
   background-attachment: fixed;
 }
@@ -81,7 +123,8 @@ body {
   width: 200%;
   height: 12em;
   -webkit-animation: wave 10s -3s linear infinite;
-          animation: wave 10s -3s linear infinite;
+  animation: wave 10s -3s linear infinite;
+  -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
   opacity: 0.8;
   bottom: 0;
@@ -103,43 +146,72 @@ body {
 
 @-webkit-keyframes wave {
   2% {
+    -webkit-transform: translateX(1);
     transform: translateX(1);
   }
   25% {
+    -webkit-transform: translateX(-25%);
     transform: translateX(-25%);
   }
   50% {
+    -webkit-transform: translateX(-50%);
     transform: translateX(-50%);
   }
   75% {
+    -webkit-transform: translateX(-25%);
     transform: translateX(-25%);
   }
   100% {
+    -webkit-transform: translateX(1);
     transform: translateX(1);
   }
 }
 
 @keyframes wave {
   2% {
+    -webkit-transform: translateX(1);
     transform: translateX(1);
   }
   25% {
+    -webkit-transform: translateX(-25%);
     transform: translateX(-25%);
   }
   50% {
+    -webkit-transform: translateX(-50%);
     transform: translateX(-50%);
   }
   75% {
+    -webkit-transform: translateX(-25%);
     transform: translateX(-25%);
   }
   100% {
+    -webkit-transform: translateX(1);
     transform: translateX(1);
   }
 }
 .container {
-  background: linear-gradient(hsla(0deg, 0%, 100%, 0.4), hsla(0deg, 0%, 100%, 0.3) 25%, rgba(131, 134, 138, 0.3) 50%);
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(hsla(0deg, 0%, 100%, 0.4)),
+    color-stop(25%, hsla(0deg, 0%, 100%, 0.3)),
+    color-stop(50%, rgba(131, 134, 138, 0.3))
+  );
+  background: -o-linear-gradient(
+    hsla(0deg, 0%, 100%, 0.4),
+    hsla(0deg, 0%, 100%, 0.3) 25%,
+    rgba(131, 134, 138, 0.3) 50%
+  );
+  background: linear-gradient(
+    hsla(0deg, 0%, 100%, 0.4),
+    hsla(0deg, 0%, 100%, 0.3) 25%,
+    rgba(131, 134, 138, 0.3) 50%
+  );
   border-radius: 5px;
   max-width: 400px;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
   margin: 1vh auto 0;
   border: 2px solid #111439;
@@ -165,4 +237,4 @@ body {
 .container .outputUser {
   font-size: 2rem;
   font-weight: 900;
-}/*# sourceMappingURL=style.css.map */
+}

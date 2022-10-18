@@ -8,6 +8,7 @@ $fontColor: #111439;
   box-sizing: border-box;
   font-family: "poppins", monospace;
   color: $fontColor;
+  user-select: none;
 }
 
 body {
