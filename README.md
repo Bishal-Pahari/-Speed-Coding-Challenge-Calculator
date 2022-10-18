@@ -1,4 +1,4 @@
-#Introduction 
+# Introduction 
 I tried coding a calculator app with HTML, SASS and JS in the shortest amount of time with my current knowledge. This simple prototype of calculator can perform only 
 perform simple mathematical operation like, addition, substraction, multiplication and divison.
 
