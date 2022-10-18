@@ -1,0 +1,46 @@
+.buttons {
+  width: 100%;
+
+  .buttons-row {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 2px 0;
+  }
+
+  .btn {
+    width: 85px;
+    padding: 20px;
+    margin: 0 3px;
+    cursor: pointer;
+    font-weight: 900;
+    background: transparent;
+    border: 2px solid #111439;
+    border-radius: 5px;
+
+    &:hover {
+      background: linear-gradient(
+        hsla(0, 0%, 100%, 0.4),
+        hsla(0, 0%, 100%, 0.3) 25%,
+        rgba(246, 249, 252, 0.3) 50%,
+        #f6f9fc 280%
+      );
+      color: white;
+    }
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+  }
+
+  .btn-backspace {
+    width: 385px;
+    padding: 5px;
+    font-size: 2rem;
+  }
+
+  .btn-enter {
+    width: 180px;
+  }
+}
