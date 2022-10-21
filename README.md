@@ -11,3 +11,8 @@ It took 2 hours and 17 minutes to complete and Debug.
 
 Live Demo: [click here] (https://bishal-pahari.github.io/Speed-coding-Calculator/).
 
+# Mobile-Preview
+
+
+![mobile](https://user-images.githubusercontent.com/61013432/197200645-c89b865e-5bce-47b1-b4a7-00b38231ebd8.png)
+
